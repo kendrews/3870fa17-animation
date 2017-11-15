@@ -1,0 +1,142 @@
+
+li {
+  display: inline;
+  padding-right: 10px;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+/*Sprite Animation*/
+.walk {
+  margin: auto;
+  height: 346px;
+  width: 281.3px;
+  background: url(noface.png);
+
+
+
+  -webkit-animation: play 1s steps(8) infinite;
+  -moz-animation: play 1s steps(8) infinite;
+  -ms-animation: play 1s steps(8) infinite;
+  -o-animation: play 1s steps(8) infinite;
+  -animation: play 1s steps(8) infinite;
+}
+
+@-webkit-keyframes play {
+  from{ background-position: 0px;}
+  to { background-position: 0px;}
+}
+
+@keyframes play {
+  from {background-position: 0px;}
+  to {background-position: -2252px;}
+}
+
+/*explode Effect Animation*/
+.explode {
+  width: 1000px;
+  height: 1000px;
+  margin: 100px auto;
+  background-color: red;
+
+  border-radius: 100%;
+  -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
+  animation: sk-scaleout 1.0s infinite ease-in-out;
+}
+
+@-webkit-keyframes sk-scaleout {
+  0% { -webkit-transform: scale(0) }
+  100% {
+    -webkit-transform: scale(1.0);
+    opacity: 0;
+  }
+}
+
+@keyframes sk-scaleout {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  } 100% {
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+    opacity: 0;
+  }
+}
+
+/* Changing colors Effect Animation */
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate (-50%, -50%);
+}
+.circle {
+  width: 300px;
+  height: 300px;
+  background: black;
+  box-sizing: border-box;
+  animation: circle 5s infinite;
+}
+@keyframes circle{
+  0%
+  {
+    transform: rotate(0deg);
+      border-radius: 50%;
+      background: blue;
+  }
+  25%
+  {
+    transform: rotate(0deg);
+      border-radius: 50%;
+      background: red;
+  }
+  50%
+  {
+    transform: rotate(0deg);
+      border-radius: 50%;
+      background: yellow;
+  }
+  75%
+  {
+    transform: rotate(0deg);
+      border-radius: 50%;
+      background: purple;
+  }
+  100%
+  {
+    transform: rotate(0deg);
+      border-radius: 50%;
+      background: green;
+  }
+}
+/*Spin Effect Animation*/
+.square {
+  margin: 100px auto;
+  width: 300px;
+  height: 300px;
+  background: black;
+  box-sizing: border-box;
+  animation: square 5s infinite;
+}
+@keyframes square {
+  0%
+  {
+    transform: rotate(0deg);
+      border-radius: 0%;
+      background: black;
+  }
+  50%
+  {
+    transform: rotate(360deg);
+      border-radius: 0%;
+      background: black;
+  }
+  100%
+  {
+    transform: rotate(0deg);
+      border-radius: 0%;
+      background: black;
+  }
+}
